@@ -273,6 +273,7 @@
     font-family: sans-serif;
     font-size: 25px;
   }
+<<<<<<< HEAD
 
   .list-order {
     display: inline-flex;
@@ -425,3 +426,126 @@
   label.star:before {
     content: '\2605';
   }
+=======
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #117D11;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #117D11;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.content-right {
+  float: right;
+}
+.back-button{
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  background-color: #D50027;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  margin-left: 0;
+  margin-right: auto;
+  float: left;
+  cursor: pointer;
+}
+.back-button:hover{
+  background-color: #a2001e;
+}
+.save-button{
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  background-color: #82D800;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
+  cursor: pointer;
+}
+.save-button:hover{
+  background-color: #63a500;
+}
+.square-image{
+  width: 150px;
+  height: 150px;
+  border-style: solid;
+  border-width: 1px;
+}
+.bottom-table{
+  vertical-align: bottom;
+}
+.upper-table{
+  vertical-align: baseline;
+}
+#edit-profile-content {
+  position: fixed;
+  margin-top: 7%;
+  left: 30%;
+  position: fixed;
+  text-align: left;
+  margin-left: -150px;
+}
+.horizontal-space{
+  padding-left: 30px;
+}
+.vertical-space{
+  padding-bottom: 20px;
+}
+>>>>>>> 2aefa872bd358e27a2e25e1aa72dde6df68f1538
