@@ -105,6 +105,7 @@
 #navbar{
   margin: 0 auto;
   position: fixed;
+  z-index: 1;
   }
   .list-item {
     display: inline-flex;
@@ -159,24 +160,29 @@
   }
   .floating-box-left {
     float: left;
-    width: 300px;
-    height: 100px;
-    margin: 10px;
+    width: 500px;
+    height: 110px;
+    margin: 0;
     left: 30%;
     position: fixed;
     text-align: left;
+    padding-top: 20px;
+    margin-top: -10px;
     margin-left: -150px;
+    background: white;
   }
   .floating-box-right {
     float: right;
-    width: 300px;
+    width: 500px;
     height: 100px;
-    margin: 10px;
+    margin: 0;
     right: 30%;
     position: fixed;
     text-align: right;
     margin-right: -150px;
-    padding-top: 30px;
+    margin-top: -10px;
+    padding-top: 40px;
+    background: white;
   }
   .after-box {
     clear: left;
@@ -194,43 +200,39 @@
   }
 
   #profile-header {
-    position: fixed;
-    margin-top: 170px;
+    position: absolute;
+    margin-top: 13%;
+    margin-left: 30%;
   }
   .floating-box-left-p {
     float: left;
-    width: 300px;
+    width: 500px;
     height: 100px;
     margin: 10px;
     left: 30%;
-    position: fixed;
+    position: absolute;
     text-align: left;
     margin-left: -150px;
-    position: fixed;
-    left: 30%;
-    margin-left: -150px;
+    position: absolute;
     padding-top: 20px;
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
   }
   .floating-box-right-p {
     float: right;
-    width: 300px;
+    width: 500px;
     height: 100px;
     margin: 10px;
     right: 30%;
-    position: fixed;
+    position: absolute;
     text-align: right;
-    margin-right: -150px;
+    margin-right: -700px;
     padding-top: 30px;
-    position: fixed;
-    right: 30%;
-    margin-right: -150px;
   }
 
   #profile-content {
-    position: fixed;
+    position: absolute;
     margin-top: 25%;
     margin-left: 40%;
   }
@@ -247,9 +249,27 @@
     font-size: 30px;
     font-weight: bold;
   }
-  .driver {
-
-  }
   .data {
+    text-align: center;
+    font-size: 20px;
+  }
 
+  #preferred-header {
+    position: absolute;
+    margin-top: 75%;
+    margin-left: 30%;
+  }
+  .floating-box-left-l {
+    float: left;
+    width: 500px;
+    height: 100px;
+    margin: 10px;
+    left: 30%;
+    position: absolute;
+    text-align: left;
+    margin-left: -150px;
+    position: absolute;
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-size: 25px;
   }
