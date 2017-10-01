@@ -273,7 +273,6 @@
     font-family: sans-serif;
     font-size: 25px;
   }
-<<<<<<< HEAD
 
   .list-order {
     display: inline-flex;
@@ -426,7 +425,7 @@
   label.star:before {
     content: '\2605';
   }
-=======
+
   .switch {
   position: relative;
   display: inline-block;
@@ -548,4 +547,3 @@ input:checked + .slider:before {
 .vertical-space{
   padding-bottom: 20px;
 }
->>>>>>> 2aefa872bd358e27a2e25e1aa72dde6df68f1538
