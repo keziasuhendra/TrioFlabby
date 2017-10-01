@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ojek Panas | Order</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="navbar">
+    <div class="floating-box-left">
+      <h1>Ojek Panas</h1>
+    </div>
+    <ul class="centered">
+      <li class="list-item">
+    </ul>
+    <div class="floating-box-right">
+      <span>Hi, <b>pikachu</b> !</span><br>
+      <a href=#logout>Logout</a>
+    </div>
+    <div class="after-box">
+      <ul class="centered">
+        <li class="active"><a href="#home">ORDER</a>
+        <li class="list-item"><a href="#news">HISTORY</a>
+        <li class="list-item"><a href="#contact">MY PROFILE</a>
+      </ul>
+    </div>
+  </div>
+
+  <div id="order-header">
+    <div class="floating-box-left-p">
+      <span>MAKE AN ORDER</span>
+    </div>
+    <div class="after-box">
+      <ul class="centered">
+        <li class="order-active"><div class="circle">1</div>Select Destination</li>
+        <li class="list-order"><div class="circle">2</div>Select a Driver</li>
+        <li class="list-order"><div class="circle">3</div>Complete Your Order</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="order-page">
+    <form method="POST">
+      <table border="0">
+        <tr>
+          <td><label class="label-order" for="pickup">Picking Point</label></td>
+          <td><input class="input-text" type="text" name="pickup" id="pickup" maxlength="200"></td>
+        </tr>
+        <tr>
+          <td><label class="label-order" for="dest">Destination</label></td>
+          <td><input class="input-text" type="text" name="dest" id="dest" maxlength="200"></td>
+        </tr>
+        <tr>
+          <td><label class="label-order" for="pref">Preferred Driver</label></td>
+          <td><input class="input-text" type="text" name="pref" id="pref" maxlength="200" placeholder="  (optional)"></td>
+        </tr>
+      </table><br>
+      <div class="button-center">NEXT</div>
+    </form>
+  </div>
+</body>
+</html>
