@@ -105,7 +105,7 @@
 #navbar{
   margin: 0 auto;
   position: fixed;
-  z-index: 1;
+  z-index: 500;
   }
   .list-item {
     display: inline-flex;
@@ -580,7 +580,7 @@ input:checked + .slider:before {
   position: absolute;
   padding-top: auto;
   font-family: sans-serif;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
 .mini-navbar table {
@@ -663,7 +663,7 @@ input:checked + .slider:before {
 }
 
 .data-rating {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .button-choose{
