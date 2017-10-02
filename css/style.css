@@ -104,8 +104,9 @@
 
 #navbar{
   margin: 0 auto;
+  top: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 500;
   }
   .list-item {
     display: inline-flex;
@@ -580,16 +581,32 @@ input:checked + .slider:before {
   position: absolute;
   padding-top: auto;
   font-family: sans-serif;
-  font-size: 28px;
+  font-size: 35px;
   font-weight: bold;
 }
-.mini-navbar table {
+.floating-box-left-mo2 {
+  float: left;
+  width: 600px;
+  height: 100px;
+  margin: 10px;
+  left: 30%;
+  margin-top: -65px;
+  position: absolute;
+  text-align: left;
+  margin-left: -165px;
+  position: absolute;
+  padding-top: auto;
+  font-family: sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+#mini-navbar table {
   border-collapse: collapse;
 }
-.mini-navbar table, .mini-navbar td {
+#mini-navbar table, #mini-navbar td {
   border: 1px solid black;
 }
-.mini-navbar td {
+#mini-navbar td {
   height: 60px;
   width: 450px;
   margin: auto;
@@ -606,8 +623,8 @@ input:checked + .slider:before {
 .history-list-item{
   width: 700px;
   left: 30%;
-  margin-top: 100px;
-  margin-left: 200px;
+  margin-top: auto;
+  margin-left: 300px;
 }
 .hide-button{
   width: 80px;
@@ -691,4 +708,8 @@ input:checked + .slider:before {
 
 .horizontal-space-small{
   width: 20px;
+}
+#mini-navbar{
+    margin-top: 20%;
+    margin-left: 17.5%;
 }

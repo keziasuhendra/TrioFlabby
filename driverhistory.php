@@ -19,8 +19,8 @@
     <div id="mini-navbar">
 	    <table>
 	    	<tr>
-	    		<td class="selected-navbar">MY PREVIOUS ORDERS</td>
-	    		<td>DRIVER HISTORY</td>
+	    		<td>MY PREVIOUS ORDERS</td>
+	    		<td class="selected-navbar">DRIVER HISTORY</td>
 	    	</tr>
 	    </table>
     </div>
