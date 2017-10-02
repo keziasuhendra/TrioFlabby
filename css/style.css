@@ -566,10 +566,61 @@ input:checked + .slider:before {
   left: 10%;
   position: absolute;
   text-align: left;
-  margin-left: -240px;
+  margin-left: -235px;
   position: absolute;
   padding-top: 20px;
   font-family: sans-serif;
   font-size: 35px;
   font-weight: bold;
+}
+
+.preferred-driver {
+  width: 550px;
+  height: auto;
+  background: white;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  border-radius: 50px;
+  color: black;
+  margin: auto;
+  padding: 30px;
+  padding-top: 15px;
+  padding-left: 80px;
+}
+
+.header-pref {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.data-name {
+  font-size: 25px;
+}
+
+.data-rating {
+  font-size: 15px;
+}
+
+.button-choose{
+  width: 150px;
+  height: 25px;
+  padding: 5px;
+  padding-top: 10px;
+  background-color: #85D507;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  color: black;
+  margin-left: auto;
+  margin-right: 0;
+  float: right;
+  cursor: pointer;
+}
+
+.button-choose:hover{
+  background-color: #66a405;
 }
