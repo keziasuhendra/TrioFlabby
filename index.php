@@ -13,7 +13,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ojek Panas</title>
+	<link rel="icon" href="icon.png" />
+	<title>Ojek Panas | Login</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>

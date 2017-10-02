@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ojek Panas</title>
+	<link rel="icon" href="icon.png" />
+	<title>Ojek Panas | Edit</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script type="text/javascript" src="./js/editlocation.js"></script>  
 </head>

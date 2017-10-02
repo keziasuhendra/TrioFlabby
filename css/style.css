@@ -592,7 +592,7 @@ input:checked + .slider:before {
   margin-top: -65px;
   position: absolute;
   text-align: left;
-  margin-left: -165px;
+  margin-left: -150px;
   position: absolute;
   padding-top: auto;
   font-family: sans-serif;
@@ -607,7 +607,7 @@ input:checked + .slider:before {
 }
 #mini-navbar td {
   height: 60px;
-  width: 450px;
+  width: 430px;
   margin: auto;
   text-decoration: none;
   color: black;
@@ -623,7 +623,7 @@ input:checked + .slider:before {
   width: 700px;
   left: 30%;
   margin-top: auto;
-  margin-left: 300px;
+  margin-left: 350px;
 }
 .hide-button{
   width: 80px;
@@ -710,7 +710,7 @@ input:checked + .slider:before {
 }
 #mini-navbar{
     margin-top: 20%;
-    margin-left: 17.5%;
+    margin-left: 19.5%;
 }
 .mini-navbar a {
   width: auto;

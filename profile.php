@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="icon.png" />
   <title>Ojek Panas | Profile</title>
   <link rel="stylesheet" href="css/style.css">
 </head>

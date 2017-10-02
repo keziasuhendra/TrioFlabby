@@ -4,7 +4,7 @@ document.write('\
   </head>\
   <body>\
     <div class="floating-box-left">\
-      <h1>Ojek Panas</h1>\
+      <img src="logo.png" width="280px" height="95px">\
     </div>\
     <ul class="centered">\
       <li class="list-item">\
