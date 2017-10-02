@@ -680,7 +680,7 @@ input:checked + .slider:before {
 }
 
 .data-rating {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .button-choose{
