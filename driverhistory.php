@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ojek Panas</title>
+	<link rel="icon" href="icon.png" />
+	<title>Ojek Panas | History</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
@@ -9,9 +10,9 @@
     	<script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
     	<div class="after-box">
       		<ul class="centered">
-        		<li class="active"><a href="#home">ORDER</a>
-        		<li class="list-item"><a href="#news">HISTORY</a>
-        		<li class="list-item"><a href="#contact">MY PROFILE</a>
+						<li class="list-item"><a href="order.php">ORDER</a>
+		        <li class="active"><a href="historyorder.php">HISTORY</a>
+		        <li class="list-item"><a href="profile.php">MY PROFILE</a>
       		</ul>
     	</div>
     </div>
@@ -19,8 +20,8 @@
     <div id="mini-navbar">
 	    <table>
 	    	<tr>
-	    		<td>MY PREVIOUS ORDERS</td>
-	    		<td class="selected-navbar">DRIVER HISTORY</td>
+					<td class="mini-navbar"><a href="historyorder.php">MY PREVIOUS ORDERS</a></td>
+	    		<td class="selected-navbar"><a href="driverhistory.php">DRIVER HISTORY</a></td>
 	    	</tr>
 	    </table>
     </div>

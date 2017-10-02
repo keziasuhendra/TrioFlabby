@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -10,9 +11,9 @@
     <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
     <div class="after-box">
       <ul class="centered">
-        <li class="active"><a href="#home">ORDER</a>
-        <li class="list-item"><a href="#news">HISTORY</a>
-        <li class="list-item"><a href="#contact">MY PROFILE</a>
+        <li class="active"><a href="order.php">ORDER</a>
+        <li class="list-item"><a href="historyorder.php">HISTORY</a>
+        <li class="list-item"><a href="profile.php">MY PROFILE</a>
       </ul>
     </div>
   </div>

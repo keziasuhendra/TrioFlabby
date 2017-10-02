@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,9 +10,9 @@
     <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
     <div class="after-box">
       <ul class="centered">
-        <li class="active"><a href="#home">ORDER</a>
-        <li class="list-item"><a href="#news">HISTORY</a>
-        <li class="list-item"><a href="#contact">MY PROFILE</a>
+        <li class="active"><a href="order.php">ORDER</a>
+        <li class="list-item"><a href="historyorder.php">HISTORY</a>
+        <li class="list-item"><a href="profile.php">MY PROFILE</a>
       </ul>
     </div>
   </div>
@@ -46,7 +47,7 @@
           <td class="horizontal-space"></td>
           <td><br>
           <form method="POST">
-            <div class="button-choose">I CHOOSE YOU!</div>
+            <div class="button-choose"><a href="completeorder.php">I CHOOSE YOU!</a></div>
           </form></td>
         </tr>
 
