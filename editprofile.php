@@ -5,7 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<div class="floating-box-left-p">
+	<div class="edit-title">
         <span>EDIT PROFILE INFORMATION</span>
     </div>
     <div id="edit-profile-content">
