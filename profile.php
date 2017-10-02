@@ -9,9 +9,9 @@
     <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
     <div class="after-box">
       <ul class="centered">
-        <li class="list-item"><a href="#home">ORDER</a>
-        <li class="list-item"><a href="#news">HISTORY</a>
-        <li class="active"><a href="#contact">MY PROFILE</a>
+        <li class="list-item"><a href="order.php">ORDER</a>
+        <li class="list-item"><a href="historyorder.php">HISTORY</a>
+        <li class="active"><a href="profile.php">MY PROFILE</a>
       </ul>
     </div>
   </div>
@@ -21,7 +21,7 @@
       <span>MY PROFILE</span>
     </div>
     <div class="floating-box-right-p">
-      <img src="pencil.png" width="30px" height="30px">
+      <a href="editprofile.php"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 
@@ -39,7 +39,7 @@
       <span>PREFERRED LOCATIONS:</span>
     </div>
     <div class="floating-box-right-p">
-      <img src="pencil.png" width="30px" height="30px">
+      <a href="editlocation.php"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 </body>
