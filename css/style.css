@@ -206,7 +206,7 @@
   }
   .floating-box-left-p {
     float: left;
-    width: 500px;
+    width: 600px;
     height: 100px;
     margin: 10px;
     left: 30%;
@@ -393,4 +393,76 @@ input:checked + .slider:before {
 }
 .vertical-space{
   padding-bottom: 20px;
+}
+.floating-box-left-small {
+  float: left;
+  width: 600px;
+  height: 100px;
+  margin: 10px;
+  left: 30%;
+  position: absolute;
+  text-align: left;
+  margin-left: -150px;
+  position: absolute;
+  padding-top: auto;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+.mini-navbar table {
+  border-collapse: collapse;
+}
+.mini-navbar table, .mini-navbar td {
+  border: 1px solid black;
+}
+.mini-navbar td {
+  height: 60px;
+  width: 450px;
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+.selected-navbar {
+  background-color: #6ACA6B;
+}
+.history-list-item{
+  width: 700px;
+  left: 30%;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+.hide-button{
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  background-color: #D50027;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+  margin-left: 0;
+  margin-right: auto;
+  float: left;
+  cursor: pointer;
+}
+.hide-button:hover{
+  background-color: #a2001e;
+}
+.history-date{
+  font-size: 18px;
+  color: grey;
+}
+.history-driver-name{
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+}
+.horizontal-space-small{
+  width: 20px;
 }
