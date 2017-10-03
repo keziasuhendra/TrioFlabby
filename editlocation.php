@@ -12,13 +12,41 @@
     </div>
     <div id="edit-profile-content">
     	<div id="edit-location-list">
-    		<table class="border-table" width="550px">
+    		<table id="preferredlocation" class="border-table" width="550px">
     		<thread>
 		    	<tr>
 		    		<th>No</th>
 		    		<th>Location</th>
 		    		<th colspan="2">Actions</th>
 		    	</tr>
+		    	<?php
+					$host = 'localhost';
+				  	$user = 'root';
+				  	$pass = '';
+				  	$db = 'trioflabby';
+				  	$conn = new mysqli($host,$user,$pass,$db) or die($mysqli -> error);
+					$sql = "SELECT * FROM preferredlocation WHERE id=1";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						$loopResult = '';
+						$counter = 1;
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+							$loopResult .= '<tr>
+					    		<td>'.$counter.'</td>
+					    		<td>'.$row['location'].'</td>
+					    		<td class="pencil-image"><img width="20px" height="20px" id="editsave" name="pencil" onclick="changeImage()" src="pencil.png"></td>
+					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
+					    	</tr>';
+					    	$counter++;
+						}  
+					    echo $loopResult;
+					} else {
+						echo "Nothing to display :(";
+					}
+					$conn->close();
+				?>
 		    </thread>
 		    	<!-- <tr>
 		    		<td>1</td>

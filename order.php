@@ -31,7 +31,8 @@
   </div>
 
   <div id="order-page">
-    <form method="POST">
+    <script src="js/validation.js"></script>
+    <form method="POST" onsubmit="return validateForm2()" name="myForm2" action="">
       <table border="0">
         <tr>
           <td><label class="label-order" for="pickup">Picking Point</label></td>

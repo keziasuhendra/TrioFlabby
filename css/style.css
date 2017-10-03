@@ -545,11 +545,14 @@ input:checked + .slider:before {
   vertical-align: baseline;
 }
 #edit-profile-content {
-  position: fixed;
+  position: absolute;
   margin-top: 7%;
   left: 30%;
   text-align: left;
   margin-left: 30px;
+  height: auto;
+  z-index: 1;
+  overflow: scroll;
 }
 .horizontal-space{
   padding-left: 30px;
@@ -739,7 +742,6 @@ input:checked + .slider:before {
   height: 100px;
   margin: 10px;
   left: 30%;
-  position: absolute;
   text-align: left;
   margin-left: 30px;
   position: absolute;
@@ -752,6 +754,7 @@ input:checked + .slider:before {
   width: 600px;
   height: auto;
   font-size: 18px;
+  position: absolute;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 .border-table, .border-table th, .border-table td{
