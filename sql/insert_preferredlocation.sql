@@ -12,7 +12,7 @@ insert into PreferredLocation (id, location) values (3, 'France');
 insert into PreferredLocation (id, location) values (3, 'Brazil');
 insert into PreferredLocation (id, location) values (9, 'Sweden');
 insert into PreferredLocation (id, location) values (2, 'Finland');
-insert into PreferredLocation (id, location) values (4, 'China');
+insert into PreferredLocation (id, location) values (4, 'Vatican');
 insert into PreferredLocation (id, location) values (1, 'Philippines');
 insert into PreferredLocation (id, location) values (7, 'Portugal');
 insert into PreferredLocation (id, location) values (5, 'Czech Republic');
