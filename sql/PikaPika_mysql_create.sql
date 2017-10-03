@@ -1,7 +1,7 @@
 CREATE TABLE `UserBasic` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`img_path` varchar(255) NOT NULL,
-	`name` varchar(20) NOT NULL,
+	`fullname` varchar(20) NOT NULL,
 	`is_driver` bool NOT NULL DEFAULT false,
 	`star` numeric(2) NOT NULL DEFAULT '0',
 	`vote` int NOT NULL DEFAULT '0',
@@ -17,8 +17,8 @@ CREATE TABLE `OrderHistory` (
 	`id_customer` int NOT NULL,
 	`id_driver` int NOT NULL,
 	`rating` int(1) NOT NULL,
-	`comment` TEXT NOT NULL,
-	`date` DATE NOT NULL,
+	`feedback` TEXT NOT NULL,
+	`order_date` DATE NOT NULL,
 	`hidden_c` bool NOT NULL,
 	`hidden_d` bool NOT NULL
 );
@@ -26,7 +26,8 @@ CREATE TABLE `OrderHistory` (
 CREATE TABLE `UserAccount` (
 	`id` int NOT NULL AUTO_INCREMENT,
 	`username` varchar(255) NOT NULL UNIQUE,
-	`password` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`pass` varchar(255) NOT NULL,
 	`phonen_num` varchar(12) NOT NULL,
 	PRIMARY KEY (`id`)
 );
