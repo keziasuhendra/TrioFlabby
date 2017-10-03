@@ -20,33 +20,34 @@
 <body>
 	<div id="signup-rectangle">
 		<div class="title"><span>SIGN UP</span></div>
-		<form name="register-form" action="signup.php" method="POST">
+		<script src="validation.js"></script>
+		<form name="register-form" action="signup.php" method="POST" name="myForm2" onsubmit="return validateForm()">
 			<table class="form" border="0">
 				<tr>
 					<td><label class="label" for="fullname">Your Name</label></td>
-					<td colspan="2"><input class="text-field" type="text" name="fullname" id="fullname" maxlength="20" required></td>
+					<td colspan="2"><input class="text-field" type="text" name="fullname" id="fullname" maxlength="20"></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="username">Username</label></td>
-					<td><input class="small-text-field" type="text" name="username" id="username" maxlength="20" required></td>
+					<td><input class="small-text-field" type="text" name="username" id="username" maxlength="20"></td>
 					<td><div class="check">&#x2716</div></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="email">Email</label></td>
-					<td><input class="small-text-field" type="email" name="email" id="email" maxlength="20" required></td>
+					<td><input class="small-text-field" type="email" name="email" id="email" maxlength="20"></td>
 					<td><div class="check">&#x2716</div></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="pass">Password</label></td>
-					<td colspan="2"><input class="text-field" type="password" name="pass" id="pass" maxlength="20" required></td>
+					<td colspan="2"><input class="text-field" type="password" name="pass" id="pass" maxlength="20"></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="cpass">Confirm Password</label></td>
-					<td colspan="2"><input class="text-field" type="password" name="cpass" id="cpass" maxlength="20" required</td>
+					<td colspan="2"><input class="text-field" type="password" name="cpass" id="cpass" maxlength="20"></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="phone">Phone Number</label></td>
-					<td colspan="2"><input class="text-field" type="text" name="phone" id="phone" minlength="9" maxlength="12" required></td>
+					<td colspan="2"><input class="text-field" type="text" name="phone" id="phone" minlength="9" maxlength="12"></td>
 				</tr>
 			</table>
 			<div class="form-group">
