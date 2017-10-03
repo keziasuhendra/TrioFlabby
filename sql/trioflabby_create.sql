@@ -3,14 +3,15 @@ CREATE TABLE `UserBasic` (
 	`img_path` varchar(255) NOT NULL,
 	`fullname` varchar(20) NOT NULL,
 	`is_driver` bool NOT NULL DEFAULT false,
-	`star` numeric(2) NOT NULL DEFAULT '0',
+	`star` numeric(2,1) NOT NULL DEFAULT '0',
 	`vote` int NOT NULL DEFAULT '0',
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `PreferredLocation` (
 	`id` int NOT NULL,
-	`location` varchar(255) NOT NULL
+	`location` varchar(255) NOT NULL,
+	PRIMARY KEY (`id`,`location`)
 );
 
 CREATE TABLE `OrderHistory` (

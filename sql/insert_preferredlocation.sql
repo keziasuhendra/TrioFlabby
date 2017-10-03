@@ -1,0 +1,21 @@
+insert into PreferredLocation (id, location) values (10, 'Iran');
+insert into PreferredLocation (id, location) values (9, 'Albania');
+insert into PreferredLocation (id, location) values (7, 'Madagascar');
+insert into PreferredLocation (id, location) values (8, 'Brazil');
+insert into PreferredLocation (id, location) values (10, 'Afghanistan');
+insert into PreferredLocation (id, location) values (6, 'Brazil');
+insert into PreferredLocation (id, location) values (1, 'Brazil');
+insert into PreferredLocation (id, location) values (4, 'China');
+insert into PreferredLocation (id, location) values (8, 'Panama');
+insert into PreferredLocation (id, location) values (8, 'Uruguay');
+insert into PreferredLocation (id, location) values (3, 'France');
+insert into PreferredLocation (id, location) values (3, 'Brazil');
+insert into PreferredLocation (id, location) values (9, 'Sweden');
+insert into PreferredLocation (id, location) values (2, 'Finland');
+insert into PreferredLocation (id, location) values (4, 'China');
+insert into PreferredLocation (id, location) values (1, 'Philippines');
+insert into PreferredLocation (id, location) values (7, 'Portugal');
+insert into PreferredLocation (id, location) values (5, 'Czech Republic');
+insert into PreferredLocation (id, location) values (4, 'Indonesia');
+insert into PreferredLocation (id, location) values (9, 'Tanzania');
+
