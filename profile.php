@@ -66,7 +66,7 @@
       if ($result_pl->num_rows > 0) {
         $printpl = '';
         while ($row_pl = $result_pl->fetch_assoc()) {
-          $printpl .= '<ul class="preflocul"><li class="preflocli">'.$row_pl['location'];
+          $printpl .= '<ul><li>'.$row_pl['location'];
         }
         for ($i = 0; $i < $result_pl->num_rows; $i++) {
           $printpl .= '</li></ul>';
