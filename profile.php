@@ -38,16 +38,21 @@
   <div id="profile-content">
     <?php
       require 'connection.php';
-      $id = 3;
-      $sql = "SELECT * FROM user WHERE id=$id";
-      $result = $mysqli->query($sql);
+      $query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+      $result = $mysqli->query($query);
+      if (!$result) {
+        exit("The query failed!");
+      }
       $row = $result->fetch_assoc();
-      $sql_pl = "SELECT * FROM preferredlocation WHERE id=$id";
-      $result_pl = $mysqli->query($sql_pl);
+
+      $query_pl = "SELECT * FROM preferredlocation WHERE id=$_SESSION[id]";
+      $result_pl = $mysqli->query($query_pl);
     ?>
+
     <img class="picture" src="<?=$row['img_path']?>"/>
     <p class="username">@<?=$row['username']?></p>
     <p class="data"><?=$row['fullname']?></p>
+    
     <?php
       if ($row['is_driver'] == 0) {
         echo '<p class="data">Non-Driver</p>';
@@ -57,6 +62,7 @@
         echo $printed;
       }
     ?>
+    
     <p class="data">&#9993; <?=$row['email']?></p>
     <p class="data">&#9743; <?=$row['phone_num']?></p>
   </div>

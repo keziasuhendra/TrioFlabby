@@ -18,14 +18,18 @@
       require 'connection.php';
       $query = "SELECT username FROM user WHERE id='$_SESSION[id]';";
       $result = $mysqli->query($query);
-      if (!$result) exit("The query failed!");
-      else {
+      if (!$result) {
+          exit("The query failed!");
+      } else {
         $row = $result->fetch_assoc();
         echo $row['username'];
       } 
     ?>
     </b> !</span><br>
-    <a href=#logout>Logout</a>
+    
+    <form id="loqout" action="loqout.php" method="POST">
+      <a href="javascript:;" onclick="document.getElementById('loqout').submit();">Logout</a>
+    </form>
   </div>
 </body>
 </html>
