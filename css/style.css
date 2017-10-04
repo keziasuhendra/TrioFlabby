@@ -237,7 +237,7 @@
     margin-top: 25%;
     margin-left: 40%;
   }
-  
+
   .picture {
     border-radius: 50%;
     border-width: 7px;
@@ -264,7 +264,7 @@
   .floating-box-left-l {
     float: left;
     width: 500px;
-    height: 100px;
+    height: auto;
     margin: 10px;
     left: 30%;
     position: absolute;
@@ -782,12 +782,12 @@ td.cancel-image{
 #edit-location-list th{
   text-align: center;
 }
-#profile-prefered-location ul {
+#floating-box-left-l ul {
   margin: 0.75em 0;
   padding: 0 1em;
   list-style: none;
 }
-#profile-prefered-location li:before{ 
+#floating-box-left-l li:before{
   content: "";
   border-color: transparent #111;
   border-style: solid;
@@ -799,7 +799,7 @@ td.cancel-image{
   top: 0.9em;
   position: relative;
 }
-#profile-preferred.location{
+#profile-preferred-location{
   margin-top: 25%;
   margin-left: 40%;
 }

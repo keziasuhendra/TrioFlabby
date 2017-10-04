@@ -67,7 +67,7 @@ function validateForm2() {
   }
 }
 
-function validate(field, query) {
+function validate_username(field, query) {
   var xmlhttp;
 
   if (window.XMLHttpRequest) {
@@ -76,16 +76,43 @@ function validate(field, query) {
     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
 
+  console.log(field);
+  console.log(query);
   xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState != 4 && xmlhttp.status == 200) {
       document.getElementById(field).innerHTML = "Validating..";
     } else if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      document.getElementById(field).innerHTML = xmlhttp.responseText;
+      document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
     } else {
-      document.getElementById(field).innerHTML = "Error Occurred. <a href='signup.php'>Reload Or Refresh</a> the page.";
+      document.getElementById("txtHint").innerHTML = "Error Occurred. <a href='signup.php'>Reload Or Refresh</a> the page.";
     }
   }
 
-  xmlhttp.open("GET", "validate.php?field=" + field + "&query=" + query, false);
+  xmlhttp.open("GET", "getUser.php?field=" + field + "&query=" + query, true);
+  xmlhttp.send();
+}
+
+function validate_email(field, query) {
+  var xmlhttp;
+
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  console.log(field);
+  console.log(query);
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState != 4 && xmlhttp.status == 200) {
+      document.getElementById(field).innerHTML = "Validating..";
+    } else if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.getElementById("txtHint1").innerHTML = xmlhttp.responseText;
+    } else {
+      document.getElementById("txtHint1").innerHTML = "Error Occurred. <a href='signup.php'>Reload Or Refresh</a> the page.";
+    }
+  }
+
+  xmlhttp.open("GET", "getUser.php?field=" + field + "&query=" + query, true);
   xmlhttp.send();
 }

@@ -16,11 +16,11 @@
 	<link rel="icon" href="icon.png" />
 	<title>Ojek Panas | Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/validation.js"></script>
 </head>
 <body>
 	<div id="signup-rectangle">
 		<div class="title"><span>SIGN UP</span></div>
-		<script src="js/validation.js"></script>
 		<form name="register-form" action="signup.php" method="POST">
 			<table class="form" border="0">
 				<tr>
@@ -29,13 +29,13 @@
 				</tr>
 				<tr>
 					<td><label class="label" for="username">Username</label></td>
-					<td><input class="small-text-field" type="text" name="username" id="username" maxlength="20" onblur="validate('username', this.value)"></td>
-					<td><div class="check">&#x2716</div></td>
+					<td><input class="small-text-field" type="text" name="username" id="username" maxlength="20" onblur="validate_username('username', this.value)"></td>
+					<td><div id="txtHint"></div></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="email">Email</label></td>
-					<td><input class="small-text-field" type="email" name="email" id="email" maxlength="20" onblur="validate('email', this.value)"></td>
-					<td><div class="check">&#x2716</div></td>
+					<td><input class="small-text-field" type="email" name="email" id="email" maxlength="20" onblur="validate_email('email', this.value)"></td>
+					<td><div id="txtHint1"></div></td>
 				</tr>
 				<tr>
 					<td><label class="label" for="pass">Password</label></td>
@@ -57,7 +57,7 @@
 
 			<div class="block-container">
 				<div class="no-account"><a href="index.php">Already have an account?</a></div>
-				<button class="button" name="register" onclick="checkForm()" value="submit">REGISTER</button>
+				<button class="button" name="register" value="submit">REGISTER</button>
 			</div>
 		</form>
 	</div>
