@@ -1,6 +1,11 @@
 <?php
 	require 'connection.php';
 	session_start();
+	
+	if (isset($_SESSION['id'])){ // redirect if hasn't logged out
+		header("location: profile.php?id_active=$_SESSION[id]");
+	}
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		if (isset($_POST['login']))

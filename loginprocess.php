@@ -9,7 +9,7 @@
 			$_SESSION['id'] = $user['id'];
 			header("location: profile.php?id_active=$_SESSION[id]");
 		} else {
-			echo "<script>alert('Password salah !')</script>";
+			echo "<script>alert('Password salah!')</script>";
 		}
 	}
 ?>

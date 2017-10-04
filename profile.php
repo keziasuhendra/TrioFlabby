@@ -1,8 +1,6 @@
 <?php
-  session_start();
-  if (!isset($_SESSION['id'])){
-    header("location: index.php");
-  }
+  $filename = basename($_SERVER['PHP_SELF']);
+  require 'preliminarycheck.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +12,12 @@
 </head>
 <body>
   <div id="navbar">
-    <!--script src="js/navbar.js" rel="javascript" type="text/javascript">
-    </script-->
     <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
-        <li class="list-item"><a href="order.php">ORDER</a>
-        <li class="list-item"><a href="historyorder.php">HISTORY</a>
-        <li class="active"><a href="profile.php">MY PROFILE</a>
+        <li class="list-item"><a href="order.php?id_active=<?php echo $_SESSION['id']; ?>">ORDER</a>
+        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_SESSION['id']; ?>">HISTORY</a>
+        <li class="active"><a href="profile.php?id_active=<?php echo $_SESSION['id']; ?>">MY PROFILE</a>
       </ul>
     </div>
   </div>
@@ -31,7 +27,7 @@
       <span>MY PROFILE</span>
     </div>
     <div class="floating-box-right-p">
-      <a href="editprofile.php"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editprofile.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 
@@ -72,7 +68,7 @@
       <span>PREFERRED LOCATIONS:</span>
     </div>
     <div class="floating-box-right-p">
-      <a href="editlocation.php"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editlocation.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
   <div id="profile-prefered-location">
