@@ -7,7 +7,8 @@
 </head>
 <body>
   <div id="navbar">
-    <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
+    <script src="js/navbar.js" rel="javascript" type="text/javascript">
+    </script>
     <div class="after-box">
       <ul class="centered">
         <li class="list-item"><a href="order.php">ORDER</a>
@@ -27,12 +28,26 @@
   </div>
 
   <div id="profile-content">
-    <img class="picture" src="fish.png">
-    <p class="username">@pikapikapikachu</p>
-    <p class="data">Pikachu Smith</p>
-    <p class="data">Driver | <font color="orange">&#9734; 4.7</font> (1,728 votes)</p>
-    <p class="data">&#9993; pikachu@pokemonworld.net</p>
-    <p class="data">&#9743; 0899123156123</p>
+    <?php
+      require 'connection.php';
+      $sql = "SELECT * FROM user WHERE id=3";
+      $result = $mysqli->query($sql);
+      $row = $result->fetch_assoc();
+    ?>
+    <img class="picture" src="<?=$row['img_path']?>"/>
+    <p class="username">@<?=$row['username']?></p>
+    <p class="data"><?=$row['fullname']?></p>
+    <?php
+      if ($row['is_driver'] == 0) {
+        echo '<p class="data">Non-Driver</p>';
+      } else {
+        $printed = '';
+        $printed .= '<p class="data">Driver | <font color="orange">&#9734;'.$row['star']. '</font> (' .$row['vote']. ' votes)</p>';
+        echo $printed;
+      }
+    ?>
+    <p class="data">&#9993; <?=$row['email']?></p>
+    <p class="data">&#9743; <?=$row['phone_num']?></p>
   </div>
 
   <div id="preferred-header">
@@ -41,6 +56,9 @@
     </div>
     <div class="floating-box-right-p">
       <a href="editlocation.php"><img src="pencil.png" width="30px" height="30px"></a>
+    </div>
+    <div class="profile-prefered-location">
+      
     </div>
   </div>
 </body>

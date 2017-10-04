@@ -551,8 +551,6 @@ input:checked + .slider:before {
   text-align: left;
   margin-left: 30px;
   height: auto;
-  z-index: 1;
-  overflow: scroll;
 }
 .horizontal-space{
   padding-left: 30px;
@@ -782,4 +780,7 @@ td.cancel-image{
 }
 #edit-location-list th{
   text-align: center;
+}
+.profile-preferred.location{
+  
 }

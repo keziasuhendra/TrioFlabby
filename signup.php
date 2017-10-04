@@ -39,7 +39,6 @@
 				</tr>
 				<tr>
 					<td><label class="label" for="pass">Password</label></td>
-<<<<<<< HEAD
 					<td colspan="2"><input class="text-field" type="password" name="pass" id="pass"></td>
 				</tr>
 				<tr>
