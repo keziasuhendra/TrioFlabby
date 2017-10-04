@@ -1,7 +1,7 @@
 <?php
 	$filename = basename($_SERVER['PHP_SELF']);
 	require 'preliminarycheck.php';
-	
+
 	if ($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
 		require 'connection.php';
@@ -37,10 +37,20 @@
         <span>EDIT PROFILE INFORMATION</span>
     </div>
     <div id="edit-profile-content">
-    <form method="POST">
+    <form action="editprofileprocess.php" method="POST">
     	<table>
+			<?php
+				require 'connection.php';
+				$query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+				$result = $mysqli->query($query);
+				if (!$result) {
+					exit("The query failed!");
+				}
+				$row = $result->fetch_assoc();
+			?>
+
 	    	<tr>
-	    		<td rowspan="2"><img class="square-image" src="fish.png" alt="Profile Picture"></td>
+	    		<td rowspan="2"><img class="square-image" src="<?=$row['img_path']?>" alt="Profile Picture"></td>
 	    		<td class="horizontal-space"></td>
 	    		<td class="bottom-table"><label class="label">Update profile picture</label></td>
 	    	</tr>
