@@ -6,7 +6,7 @@
 	} else {
 		$user = $result->fetch_assoc();
 		if (password_verify($_POST['pass'], $user['pass'])) {
-			$_SESSION['username'] = $user['username'];
+			$_SESSION['fullname'] = $user['fullname'];
 			$_SESSION['logged in'] = true;
 			header("location: profile.php");
 		} else {

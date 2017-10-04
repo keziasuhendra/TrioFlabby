@@ -13,20 +13,17 @@
     <div id="edit-profile-content">
     	<div id="edit-location-list">
     		<table id="preferredlocation" class="border-table" width="550px">
-    		<thread>
+    		
 		    	<tr>
 		    		<th>No</th>
 		    		<th>Location</th>
 		    		<th colspan="2">Actions</th>
 		    	</tr>
 		    	<?php
-					$host = 'localhost';
-				  	$user = 'root';
-				  	$pass = '';
-				  	$db = 'trioflabby';
-				  	$conn = new mysqli($host,$user,$pass,$db) or die($mysqli -> error);
-					$sql = "SELECT * FROM preferredlocation WHERE id=1";
-					$result = $conn->query($sql);
+		    	    require 'connection.php';
+		    	    $id = 3;
+					$sql = "SELECT * FROM preferredlocation WHERE id=$id";
+					$result = $mysqli->query($sql);
 
 					if ($result->num_rows > 0) {
 						$loopResult = '';
@@ -45,9 +42,9 @@
 					} else {
 						echo "Nothing to display :(";
 					}
-					$conn->close();
+					$mysqli->close();
 				?>
-		    </thread>
+		    
 		    	<!-- <tr>
 		    		<td>1</td>
 		    		<td>Pewter City</td>
@@ -67,24 +64,25 @@
 		    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
 		    	</tr> -->
 		    </table>
-    	</div>
-    	<div class="small-empty-space"></div>
-    	<div class="small-title">
-        	<span>ADD NEW LOCATIONS:</span>
-    	</div>
-    	<form method="POST">
-    		<table width="550px">
-    			<tr>
-    				<td>
-    					<input class="text-field" type="text" name="newloc" id="newloc" required>
-    				</td>
-    				<td><button class="save-button" name="addloc">ADD</button></td>
-    			</tr>
-    		</table>
+		    <div class="small-empty-space"></div>
+    		<div class="small-title">
+        		<span>ADD NEW LOCATIONS:</span>
+    		</div>
+    		<form method="POST">
+    			<table width="550px">
+    				<tr>
+    					<td>
+    						<input class="text-field" type="text" name="newloc" id="newloc" required>
+    					</td>
+    					<td><button class="save-button" name="addloc">ADD</button></td>
+    				</tr>
+    			</table>
     		
-    	</form>
-    	<div class="small-empty-space"></div>
-    	<input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'">
+    		</form>
+    		<div class="small-empty-space"></div>
+    		<input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'">
+    	</div>
+    	
     </div>
     
 </body>
