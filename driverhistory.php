@@ -41,11 +41,11 @@
     			<td colspan="2" class="history-route">Saffron City-Pewter City</td>
     		</tr>
     		<tr>
-    			<td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
-    		</tr>
-    		<tr>
-    			<td colspan="2">You commented:</td>
-    		</tr>
+                <td colspan="2" class="history-rating">gave <font color="orange">5</font> stars for this order</td>
+            </tr>
+            <tr>
+                <td colspan="2">and left comment:</td>
+            </tr>
     		<tr>
     			<td class="horizontal-space-small"></td>
     			<td colspan="2">Cepat sekali! Serasa menunggu tikus Cepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikus</td>
@@ -68,10 +68,10 @@
     			<td colspan="2" class="history-route">Saffron City-Pewter City</td>
     		</tr>
     		<tr>
-    			<td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
+    			<td colspan="2" class="history-rating">gave <font color="orange">5</font> stars for this order</td>
     		</tr>
     		<tr>
-    			<td colspan="2">You commented:</td>
+    			<td colspan="2">and left comment:</td>
     		</tr>
     		<tr>
     			<td class="horizontal-space-small"></td>

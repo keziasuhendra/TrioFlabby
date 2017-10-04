@@ -71,7 +71,7 @@
 	    		<td colspan="3" class="vertical-space"></td>
 	    	</tr>
 	    	<tr>
-	    		<td><button class="back-button">BACK</button></td>
+	    		<td><input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'"></td>
 	    		<td class="horizontal-space"></td>
 	    		<td><button class="save-button">SAVE</button></td>
 	    	</tr>

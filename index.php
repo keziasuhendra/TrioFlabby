@@ -20,7 +20,7 @@
 <body>
 	<div id="signin-rectangle">
 		<div class="title"><span>LOGIN</span></div>
-		<script src="validation.js"></script>
+		<script src="js/validation.js"></script>
 		<form method="POST" action="index.php" name="myForm" onsubmit="return validateForm()">
 			<table class="form" border="0">
 				<tr>
