@@ -1,3 +1,26 @@
+<?php
+	if ($_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		require 'connection.php';
+		if (isset($_POST['img']))
+		{
+			// put image to folder img/username.img
+			// delete old img file in folder (unless default)
+			// query update img path
+		}
+		if (isset($_POST['yourname']))
+		{
+			$update = $mysqli->query("UPDATE user SET fullname='$_POST['yourname']' WHERE id='' ");
+			// query update name
+		}
+		if (isset($_POST['phone']))
+		{
+			// query update phone
+		}
+		// query update isdriver
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
