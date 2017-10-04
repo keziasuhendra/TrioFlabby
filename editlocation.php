@@ -21,7 +21,8 @@
 		    	</tr>
 		    	<?php
 		    	    require 'connection.php';
-					$sql = "SELECT * FROM preferredlocation WHERE id=1";
+		    	    $id = 3;
+					$sql = "SELECT * FROM preferredlocation WHERE id=$id";
 					$result = $mysqli->query($sql);
 
 					if ($result->num_rows > 0) {

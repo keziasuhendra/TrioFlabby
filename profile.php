@@ -30,9 +30,12 @@
   <div id="profile-content">
     <?php
       require 'connection.php';
-      $sql = "SELECT * FROM user WHERE id=3";
+      $id = 3;
+      $sql = "SELECT * FROM user WHERE id=$id";
       $result = $mysqli->query($sql);
       $row = $result->fetch_assoc();
+      $sql_pl = "SELECT * FROM preferredlocation WHERE id=$id";
+      $result_pl = $mysqli->query($sql_pl);
     ?>
     <img class="picture" src="<?=$row['img_path']?>"/>
     <p class="username">@<?=$row['username']?></p>
@@ -57,9 +60,20 @@
     <div class="floating-box-right-p">
       <a href="editlocation.php"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
-    <div class="profile-prefered-location">
-      
-    </div>
+  </div>
+  <div id="profile-prefered-location">
+    <?php
+      if ($result_pl->num_rows > 0) {
+        $printpl = '';
+        while ($row_pl = $result_pl->fetch_assoc()) {
+          $printpl .= '<ul class="preflocul"><li class="preflocli">'.$row_pl['location'];
+        }
+        for ($i = 0; $i < $result_pl->num_rows; $i++) {
+          $printpl .= '</li></ul>';
+        }
+        echo $printpl;
+      }
+    ?>
   </div>
 </body>
 </html>
