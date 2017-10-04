@@ -21,7 +21,7 @@
 	<div id="signup-rectangle">
 		<div class="title"><span>SIGN UP</span></div>
 		<script src="js/validation.js"></script>
-		<form name="register-form" action="signup.php" method="POST" onsubmit="return validateForm1()">
+		<form name="register-form" action="signup.php" method="POST">
 			<table class="form" border="0">
 				<tr>
 					<td><label class="label" for="fullname">Your Name</label></td>
@@ -39,7 +39,6 @@
 				</tr>
 				<tr>
 					<td><label class="label" for="pass">Password</label></td>
-<<<<<<< HEAD
 					<td colspan="2"><input class="text-field" type="password" name="pass" id="pass"></td>
 				</tr>
 				<tr>
@@ -58,7 +57,7 @@
 
 			<div class="block-container">
 				<div class="no-account"><a href="index.php">Already have an account?</a></div>
-				<button class="button" name="register" >REGISTER</button>
+				<button class="button" name="register" onclick="checkForm()" value="submit">REGISTER</button>
 			</div>
 		</form>
 	</div>

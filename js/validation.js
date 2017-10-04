@@ -86,6 +86,6 @@ function validate(field, query) {
     }
   }
 
-  xmlhttp.open("GET", "validation.php?field=" + field + "&query=" + query, false);
+  xmlhttp.open("GET", "validate.php?field=" + field + "&query=" + query, false);
   xmlhttp.send();
 }
