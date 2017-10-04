@@ -10,7 +10,7 @@ document.write('\
       <li class="list-item">\
     </ul>\
     <div class="floating-box-right">\
-      <span>Hi, <b><?php echo $_SESSION[id]; ?></b> !</span><br>\
+      <span>Hi, <b><?php echo "ada"; ?></b> !</span><br>\
       <a href=#logout>Logout</a>\
     </div>\
   </body>\
