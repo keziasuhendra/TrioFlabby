@@ -6,9 +6,9 @@
 	} else {
 		$user = $result->fetch_assoc();
 		if (password_verify($_POST['pass'], $user['pass'])) {
-			$_SESSION['fullname'] = $user['fullname'];
-			$_SESSION['logged in'] = true;
-			header("location: profile.php");
+			$_SESSION['id'] = $user['id'];
+			$_SESSION['login'] = true;
+			header("location: profile.php?id_active=$_SESSION[id]");
 		} else {
 			echo "<script>alert('Password salah !')</script>";
 		}

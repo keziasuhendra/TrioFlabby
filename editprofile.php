@@ -10,7 +10,8 @@
 		}
 		if (isset($_POST['yourname']))
 		{
-			$update = $mysqli->query("UPDATE user SET fullname='$_POST['yourname']' WHERE id='' ");
+			$updatedname = mysqli_real_escape_string($mysqli, $_POST['yourname']);
+			$mysqli->query("UPDATE user SET fullname='$updatedname' WHERE id='". $_SESSION['id'] ."'");
 			// query update name
 		}
 		if (isset($_POST['phone']))
@@ -71,7 +72,7 @@
 	    		<td colspan="3" class="vertical-space"></td>
 	    	</tr>
 	    	<tr>
-	    		<td><input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'"></td>
+	    		<td><button class="back-button">BACK</button></td>
 	    		<td class="horizontal-space"></td>
 	    		<td><button class="save-button">SAVE</button></td>
 	    	</tr>
