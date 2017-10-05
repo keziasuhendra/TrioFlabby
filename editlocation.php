@@ -10,25 +10,6 @@
 			/*echo "<script>alert('Failed to add new location');</script>";*/
 		}
 	}
-	/*if (isset($_POST['delete'])) {
-		$doc = new DomDocument();
-		$doc->loadHTMLFile('editlocation.php');
-		$delloc = $doc->getElementById('data');
-		$sql_delete = ("DELETE FROM preferredlocation WHERE location=");
-	}
-	if(isset($_POST['formDelete'])){
-if(isset($_POST['quoteid']) && !empty($_POST['quoteid'])){
-    require_once('config.php');
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) 
-    or die ('Cannot connect to db');
-    $quoteid = $_POST['quoteid'];
-    echo "DELETE FROM quotes WHERE quoteid =".$quoteid;
-    $result = $conn->query("DELETE FROM quotes WHERE quoteid =".$quoteid);
-    $doc = new DomDocument();
-$doc->loadHTMLFile('http://www.results.com');
-$thediv = $doc->getElementById('result');
-echo $thediv->textContent;
-}*/
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +75,7 @@ echo $thediv->textContent;
 
     		</form>
     		<div class="small-empty-space"></div>
-    		<input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'">
+    		<input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php?id_active=<?php echo $_GET['id_active']; ?>'">
     	</div>
 
     </div>
