@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" href="icon.png" />
+    <link rel="icon" href="img/icon.png" />
     <title>Ojek Panas</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="floating-box-left">
-        <img src="logo.png" width="280px" height="95px">
+        <img src="img/logo.png" width="280px" height="95px">
     </div>
     <ul class="centered">
         <li class="list-item">

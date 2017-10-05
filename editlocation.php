@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="icon.png" />
+	<link rel="icon" href="img/icon.png" />
 	<title>Ojek Panas | Edit</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<script type="text/javascript" src="./js/editlocation.js"></script>
@@ -47,8 +47,8 @@
 							$loopResult .= '<tr>
 					    		<td>'.$counter.'</td>
 					    		<td id="data'.$counter.'">'.$row['location'].'</td>
-					    		<td class="pencil-image"><img width="20px" height="20px" id="'.$counter.'" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px" id="'.$counter.'" name="delete"></td>
+					    		<td class="pencil-image"><img width="20px" height="20px" id="'.$counter.'" name="pencil" onclick="changeImage()" src="img/pencil.png"></td>
+					    		<td class="cancel-image"><img src="img/cancel.png" width="20px" height="20px" id="'.$counter.'" name="delete"></td>
 					    	</tr>';
 					    	$counter++;
 						}

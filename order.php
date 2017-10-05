@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="icon.png" />
+  <link rel="icon" href="img/icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
 </head>

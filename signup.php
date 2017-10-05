@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="icon" href="icon.png" />
+	<link rel="icon" href="img/icon.png" />
 	<title>Ojek Panas | Sign Up</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="js/validation.js"></script>

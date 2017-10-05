@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="icon.png" />
+  <link rel="icon" href="img/icon.png" />
   <title>Ojek Panas | Profile</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,7 +26,7 @@
       <span>MY PROFILE</span>
     </div>
     <div class="floating-box-right-p">
-      <a href="editprofile.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editprofile.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="img/pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 
@@ -79,7 +79,7 @@
       ?>
     </div>
     <div class="floating-box-right-p">
-      <a href="editlocation.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editlocation.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="img/pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 </body>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="icon.png" />
+  <link rel="icon" href="img/icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -32,7 +32,7 @@
 
   <div id="order-content">
     <div class="floating-box-left-o">HOW WAS IT?</div><br><br><br><br><br>
-    <img class="picture-o" src="fish.png">
+    <img class="picture-o" src="img/fish.png">
     <p class="username">@pikapikapikachu</p>
     <p class="data">Pikachu Smith</p>
     <div class="star">

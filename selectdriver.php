@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="icon" href="icon.png" />
+  <link rel="icon" href="img/icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,7 +36,7 @@
       <p class="header-pref">PREFERRED DRIVERS:</p>
       <table>
         <tr>
-          <td rowspan="3"><img src="fish.png" class="square-image"></td>
+          <td rowspan="3"><img src="img/fish.png" class="square-image"></td>
           <td class="horizontal-space"></td>
           <td class="horizontal-space"></td>
           <td class="data-name">Bomba-rattata Tattataata</td>
@@ -56,7 +56,7 @@
         </tr>
 
         <tr>
-          <td rowspan="3"><img src="fish.png" class="square-image"></td>
+          <td rowspan="3"><img src="img/fish.png" class="square-image"></td>
           <td class="horizontal-space"></td>
           <td class="horizontal-space"></td>
           <td class="data-name">Bomba-rattata Tattataata</td>
@@ -76,7 +76,7 @@
         </tr>
 
         <tr>
-          <td rowspan="3"><img src="fish.png" class="square-image"></td>
+          <td rowspan="3"><img src="img/fish.png" class="square-image"></td>
           <td class="horizontal-space"></td>
           <td class="horizontal-space"></td>
           <td class="data-name">Bomba-rattata Tattataata</td>
@@ -102,7 +102,7 @@
       <p class="header-pref">OTHER DRIVERS:</p>
       <table>
         <tr>
-          <td rowspan="3"><img src="fish.png" class="square-image"></td>
+          <td rowspan="3"><img src="img/fish.png" class="square-image"></td>
           <td class="horizontal-space"></td>
           <td class="horizontal-space"></td>
           <td class="data-name">Bomba-rattata Tattataata</td>
@@ -122,7 +122,7 @@
         </tr>
 
         <tr>
-          <td rowspan="3"><img src="fish.png" class="square-image"></td>
+          <td rowspan="3"><img src="img/fish.png" class="square-image"></td>
           <td class="horizontal-space"></td>
           <td class="horizontal-space"></td>
           <td class="data-name">Bomba-rattata Tattataata</td>
