@@ -1,5 +1,4 @@
 <?php
-	$filename = basename($_SERVER['PHP_SELF']);
 	require 'preliminarycheck.php';
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST')
