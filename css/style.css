@@ -603,6 +603,9 @@ input:checked + .slider:before {
   font-size: 35px;
   font-weight: bold;
 }
+.mini-navbar:hover {
+  background-color: #9cdc9d;
+}
 #mini-navbar table {
   border-collapse: collapse;
 }
@@ -642,7 +645,7 @@ input:checked + .slider:before {
   color: black;
   margin-left: 0;
   margin-right: auto;
-  float: left;
+  float: right;
   cursor: pointer;
 }
 .hide-button:hover{
@@ -814,4 +817,9 @@ td.cancel-image{
   border-style: solid;
   margin-left: 20px;
   margin-bottom: 40px;
+}
+.nothing {
+  color: grey;
+  font-size: 24px;
+  text-align: center;
 }

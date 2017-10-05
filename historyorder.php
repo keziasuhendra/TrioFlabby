@@ -31,58 +31,59 @@
 	    </table>
     </div>
     <div class="empty-space"></div>
-    <div class="history-list-item">
-    	<table>
-    		<tr>
-    			<td rowspan="6"><img class="square-image" src="fish.png" alt="Driver Profile"></td>
-    			<td rowspan="6" class="horizontal-space"></td>
-    			<td colspan="2" class="history-date">Sunday, September 24th 2017</td>
-    			<td width="100" rowspan="2"><button class="hide-button">HIDE</button></td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-driver-name">Bomba-rattata</td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-route">Saffron City-Pewter City</td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
-    		</tr>
-    		<tr>
-    			<td colspan="2">You commented:</td>
-    		</tr>
-    		<tr>
-    			<td class="horizontal-space-small"></td>
-    			<td colspan="2">Cepat sekali! Serasa menunggu tikus Cepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikus</td>
-    		</tr>
-    		<tr><td class="vertical-space"></td></tr>
-    	</table>
-    </div>
-    <div class="history-list-item">
-    	<table>
-    		<tr>
-    			<td rowspan="6"><img class="square-image" src="fish.png" alt="Driver Profile"></td>
-    			<td rowspan="6" class="horizontal-space"></td>
-    			<td colspan="2" class="history-date">Sunday, September 24th 2017</td>
-    			<td width="100" rowspan="2"><button class="hide-button">HIDE</button></td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-driver-name">Bomba-rattata</td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-route">Saffron City-Pewter City</td>
-    		</tr>
-    		<tr>
-    			<td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
-    		</tr>
-    		<tr>
-    			<td colspan="2">You commented:</td>
-    		</tr>
-    		<tr>
-    			<td class="horizontal-space-small"></td>
-    			<td colspan="2">Cepat sekali! Serasa menunggu tikus Cepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikusCepat sekali! Serasa menunggu tikus</td>
-    		</tr>
-    	</table>
-    </div>
+    <?php
+        require 'connection.php';
+        $id = $_GET['id_active'];
+        $sql = "SELECT * FROM orderhistory WHERE id_customer=$id";
+        $result = $mysqli->query($sql);
+
+        if ($result->num_rows > 0) {
+            $loopResult = '';
+            $counter = 1;
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+                $idc = $row['id_customer'];
+                $sql_customer = "SELECT * FROM user WHERE id=$idc";
+                $resultc = $mysqli->query($sql_customer);
+                $rowc = $resultc->fetch_assoc();
+                $idd = $row['id_driver'];
+                $sql_driver = "SELECT * FROM user WHERE id=$idd";
+                $resultd = $mysqli->query($sql_driver);
+                $rowd = $resultd->fetch_assoc();
+                $loopResult .= '<div class="history-list-item">
+                    <table width="670px">
+                        <tr>
+                            <td rowspan="6" width="28"><img class="square-image" src='.$rowd['img_path'].' alt="Driver Profile"></td>
+                            <td rowspan="6" class="horizontal-space" width="10px"></td>
+                            <td colspan="2" class="history-date">Sunday, '.$row['order_date'].'</td>
+                            <td width="100" rowspan="2"><button class="hide-button">HIDE</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="history-driver-name">'.$rowd['fullname'].'</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="history-route">Saffron City-Pewter City</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">You commented:</td>
+                        </tr>
+                        <tr>
+                            <td class="horizontal-space-small"></td>
+                            <td colspan="2">'.$row['feedback'].'</td>
+                        </tr>
+                        <tr><td class="vertical-space"></td></tr>
+                    </table>
+                </div>';
+                $counter++;
+            }
+            echo $loopResult;
+        } else {
+            echo "Nothing to display :(";
+        }
+        $mysqli->close();
+    ?>
 </body>
 </html>
