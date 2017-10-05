@@ -64,16 +64,16 @@
   </div>
 
   <div id="preferred-header">
-    <div class="floating-box-left-l-1">
+    <div class="floating-box-left-l">
       <span>PREFERRED LOCATIONS:</span>
       <?php
         if ($result_pl->num_rows > 0) {
           $printpl = '';
           while ($row_pl = $result_pl->fetch_assoc()) {
-            $printpl .= '<ul><li>'.$row_pl['location'];
+            $printpl .= '<div id="triangle"><ul><li>'.$row_pl['location'];
           }
           for ($i = 0; $i < $result_pl->num_rows; $i++) {
-            $printpl .= '</li></ul>';
+            $printpl .= '</li></ul></div>';
           }
           echo $printpl;
         }

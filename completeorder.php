@@ -1,14 +1,18 @@
+<?php
+ 	$filename = basename($_SERVER['PHP_SELF']);
+  require 'preliminarycheck.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" href="icon.png" />
   <title>Ojek Panas | Order</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 </head>
 <body>
   <div id="navbar">
-    <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
+    <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
         <li class="active"><a href="order.php">ORDER</a>
@@ -29,7 +33,7 @@
 
   <div id="order-content">
     <div class="floating-box-left-o">HOW WAS IT?</div><br><br><br><br><br>
-    <img class="picture" src="fish.png">
+    <img class="picture-o" src="fish.png">
     <p class="username">@pikapikapikachu</p>
     <p class="data">Pikachu Smith</p>
     <div class="star">

@@ -23,16 +23,12 @@
   </div>
 
   <div id="order-header">
-    <div class="floating-box-left-p">
-      <span>MAKE AN ORDER</span>
-    </div>
-    <div class="after-box">
-      <ul class="centered">
+    <div class="floating-box-left-mo">MAKE AN ORDER</div>
+      <ul class="list-centered">
         <li class="order-active"><div class="circle">1</div>Select Destination</li>
         <li class="list-order"><div class="circle">2</div>Select a Driver</li>
         <li class="list-order"><div class="circle">3</div>Complete Your Order</li>
       </ul>
-    </div>
   </div>
 
   <div id="order-page">

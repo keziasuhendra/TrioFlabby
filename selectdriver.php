@@ -1,3 +1,8 @@
+<?php
+ 	$filename = basename($_SERVER['PHP_SELF']);
+  require 'preliminarycheck.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +12,7 @@
 </head>
 <body>
   <div id="navbar">
-    <script src="js/navbar.js" rel="javascript" type="text/javascript"></script>
+    <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
         <li class="active"><a href="order.php">ORDER</a>
