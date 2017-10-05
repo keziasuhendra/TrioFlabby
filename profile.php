@@ -14,9 +14,9 @@
     <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
-        <li class="list-item"><a href="order.php?id_active=<?php echo $_SESSION['id']; ?>">ORDER</a>
-        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_SESSION['id']; ?>">HISTORY</a>
-        <li class="active"><a href="profile.php?id_active=<?php echo $_SESSION['id']; ?>">MY PROFILE</a>
+        <li class="list-item"><a href="order.php?id_active=<?php echo $_GET['id_active']; ?>">ORDER</a>
+        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_GET['id_active']; ?>">HISTORY</a>
+        <li class="active"><a href="profile.php?id_active=<?php echo $_GET['id_active']; ?>">MY PROFILE</a>
       </ul>
     </div>
   </div>
@@ -26,21 +26,21 @@
       <span>MY PROFILE</span>
     </div>
     <div class="floating-box-right-p">
-      <a href="editprofile.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editprofile.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 
   <div id="profile-content">
     <?php
       require 'connection.php';
-      $query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+      $query = "SELECT * FROM user WHERE id=$_GET[id_active]";
       $result = $mysqli->query($query);
       if (!$result) {
         exit("The query failed!");
       }
       $row = $result->fetch_assoc();
 
-      $query_pl = "SELECT * FROM preferredlocation WHERE id=$_SESSION[id]";
+      $query_pl = "SELECT * FROM preferredlocation WHERE id=$_GET[id_active]";
       $result_pl = $mysqli->query($query_pl);
     ?>
 
@@ -79,7 +79,7 @@
       ?>
     </div>
     <div class="floating-box-right-p">
-      <a href="editlocation.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editlocation.php?id_active=<?php echo $_GET['id_active']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 </body>

@@ -17,7 +17,7 @@
         <?php
             require 'connection.php';
 
-            $query = "SELECT username FROM user WHERE id='$_SESSION[id]';";
+            $query = "SELECT username FROM user WHERE id='$_GET[id_active]';";
             $result = $mysqli->query($query);
             if (!$result) {
                 exit("The query failed!");

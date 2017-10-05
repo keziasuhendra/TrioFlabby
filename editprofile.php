@@ -13,7 +13,7 @@
 		if (isset($_POST['yourname']))
 		{
 			$updatedname = mysqli_real_escape_string($mysqli, $_POST['yourname']);
-			$query = "UPDATE user SET fullname='$updatedname' WHERE id='$_SESSION[id]'";
+			$query = "UPDATE user SET fullname='$updatedname' WHERE id='$_GET[id_active]'";
 			$mysqli->query($query);
 			// query update name
 		}
@@ -41,7 +41,7 @@
     	<table>
 			<?php
 				require 'connection.php';
-				$query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+				$query = "SELECT * FROM user WHERE id=$_GET[id_active]";
 				$result = $mysqli->query($query);
 				if (!$result) {
 					exit("The query failed!");
