@@ -48,7 +48,7 @@
     <img class="picture" src="<?=$row['img_path']?>"/>
     <p class="username">@<?=$row['username']?></p>
     <p class="data"><?=$row['fullname']?></p>
-    
+
     <?php
       if ($row['is_driver'] == 0) {
         echo '<p class="data">Non-Driver</p>';
@@ -58,13 +58,13 @@
         echo $printed;
       }
     ?>
-    
+
     <p class="data">&#9993; <?=$row['email']?></p>
     <p class="data">&#9743; <?=$row['phone_num']?></p>
   </div>
 
   <div id="preferred-header">
-    <div class="floating-box-left-l">
+    <div class="floating-box-left-l-1">
       <span>PREFERRED LOCATIONS:</span>
       <?php
         if ($result_pl->num_rows > 0) {
