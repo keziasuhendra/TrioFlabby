@@ -54,7 +54,9 @@
                         <tr>
                             <td rowspan="6" width="28"><img class="square-image" src='.$rowd['img_path'].' alt="Driver Profile"></td>
                             <td rowspan="6" class="horizontal-space" width="10px"></td>
-                            <td colspan="2" class="history-date">Sunday, '.$row['order_date'].'</td>
+                            <td colspan="2" class="history-date">';
+                $loopResult .= date('l, F jS Y',strtotime($row['order_date']));
+                $loopResult .= '</td>
                             <td width="100" rowspan="2"><button class="hide-button">HIDE</button></td>
                         </tr>
                         <tr>
@@ -64,7 +66,12 @@
                             <td colspan="2" class="history-route">Saffron City-Pewter City</td>
                         </tr>
                         <tr>
-                            <td colspan="2" class="history-rating">You rated: <font color="orange">&#9734;</font></td>
+                            <td colspan="2" class="history-rating">You rated: <font color="orange">';
+                for ($i = 1; $i <= $row['rating']; $i++) {
+                    $loopResult .= '&#9734';
+                }
+                
+                $loopResult .= ';</font></td>
                         </tr>
                         <tr>
                             <td colspan="2">You commented:</td>
@@ -80,7 +87,7 @@
             }
             echo $loopResult;
         } else {
-            echo "Nothing to display :(";
+            echo '<div class="nothing">Nothing to display :(</div>';
         }
         $mysqli->close();
     ?>
