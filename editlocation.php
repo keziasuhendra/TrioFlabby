@@ -10,7 +10,25 @@
 			/*echo "<script>alert('Failed to add new location');</script>";*/
 		}
 	}
-
+	/*if (isset($_POST['delete'])) {
+		$doc = new DomDocument();
+		$doc->loadHTMLFile('editlocation.php');
+		$delloc = $doc->getElementById('data');
+		$sql_delete = ("DELETE FROM preferredlocation WHERE location=");
+	}
+	if(isset($_POST['formDelete'])){
+if(isset($_POST['quoteid']) && !empty($_POST['quoteid'])){
+    require_once('config.php');
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) 
+    or die ('Cannot connect to db');
+    $quoteid = $_POST['quoteid'];
+    echo "DELETE FROM quotes WHERE quoteid =".$quoteid;
+    $result = $conn->query("DELETE FROM quotes WHERE quoteid =".$quoteid);
+    $doc = new DomDocument();
+$doc->loadHTMLFile('http://www.results.com');
+$thediv = $doc->getElementById('result');
+echo $thediv->textContent;
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -47,9 +65,9 @@
 						while($row = $result->fetch_assoc()) {
 							$loopResult .= '<tr>
 					    		<td>'.$counter.'</td>
-					    		<td>'.$row['location'].'</td>
+					    		<td id="data'.$counter.'">'.$row['location'].'</td>
 					    		<td class="pencil-image"><img width="20px" height="20px" id="'.$counter.'" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px" id="'.$counter.'" name="cancel"></td>
+					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px" id="'.$counter.'" name="delete"></td>
 					    	</tr>';
 					    	$counter++;
 						}
@@ -84,7 +102,7 @@
 </body>
 </html>
 
-<script type="text/javascript" language="javascript">
+<!-- <script type="text/javascript" language="javascript">
 	$(document).on('click', '.cancel', function() {
 
 	});
@@ -108,4 +126,4 @@
    }
   });
  });*/
-</script>
+</script> -->
