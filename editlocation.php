@@ -1,3 +1,18 @@
+<?php
+	require 'connection.php';
+	if (isset($_POST['addloc'])) {
+		$newloc = $_POST['newloc'];
+		$id = 3;
+		$sql = ("INSERT INTO preferredlocation (id, location) VALUES ('$id', '$newloc')");
+		if ($mysqli->query($sql) === true) {
+			/*echo "<script>alert('New location added');</script>";*/
+		} else {
+			/*echo "<script>alert('Failed to add new location');</script>";*/
+		}
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,8 +48,8 @@
 							$loopResult .= '<tr>
 					    		<td>'.$counter.'</td>
 					    		<td>'.$row['location'].'</td>
-					    		<td class="pencil-image"><img width="20px" height="20px" id="editsave" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
+					    		<td class="pencil-image"><img width="20px" height="20px" id="'.$counter.'" name="pencil" onclick="changeImage()" src="pencil.png"></td>
+					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px" id="'.$counter.'" name="cancel"></td>
 					    	</tr>';
 					    	$counter++;
 						}  
@@ -44,31 +59,12 @@
 					}
 					$mysqli->close();
 				?>
-		    
-		    	<!-- <tr>
-		    		<td>1</td>
-		    		<td>Pewter City</td>
-		    		<td class="pencil-image"><img width="20px" height="20px" id="editsave" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-		    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
-		    	</tr>
-		    	<tr>
-		    		<td>2</td>
-		    		<td>Saffron City</td>
-		    		<td class="pencil-image"><img width="20px" height="20px" id="editsave" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-		    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
-		    	</tr>
-		    	<tr>
-		    		<td>3</td>
-		    		<td>SkyPillar Tower</td>
-		    		<td class="pencil-image"><img width="20px" height="20px" id="editsave" name="pencil" onclick="changeImage()" src="pencil.png"></td>
-		    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px"></td>
-		    	</tr> -->
 		    </table>
 		    <div class="small-empty-space"></div>
     		<div class="small-title">
         		<span>ADD NEW LOCATIONS:</span>
     		</div>
-    		<form method="POST">
+    		<form method="POST" action="editlocation.php">
     			<table width="550px">
     				<tr>
     					<td>
@@ -87,3 +83,29 @@
     
 </body>
 </html>
+
+<script type="text/javascript" language="javascript">
+	$(document).on('click', '.cancel', function() {
+		
+	});
+	/*$(document).on('click', '.delete', function(){
+   var id = $(this).attr("id");
+   if(confirm("Are you sure you want to remove this?"))
+   {
+    $.ajax({
+     url:"delete.php",
+     method:"POST",
+     data:{id:id},
+     success:function(data){
+      $('#alert_message').html('<div class="alert alert-success">'+data+'</div>');
+      $('#user_data').DataTable().destroy();
+      fetch_data();
+     }
+    });
+    setInterval(function(){
+     $('#alert_message').html('');
+    }, 5000);
+   }
+  });
+ });*/
+</script>

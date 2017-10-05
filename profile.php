@@ -1,3 +1,8 @@
+<?php
+  $filename = basename($_SERVER['PHP_SELF']);
+  require 'preliminarycheck.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,13 +12,12 @@
 </head>
 <body>
   <div id="navbar">
-    <script src="js/navbar.js" rel="javascript" type="text/javascript">
-    </script>
+    <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
-        <li class="list-item"><a href="order.php">ORDER</a>
-        <li class="list-item"><a href="historyorder.php">HISTORY</a>
-        <li class="active"><a href="profile.php">MY PROFILE</a>
+        <li class="list-item"><a href="order.php?id_active=<?php echo $_SESSION['id']; ?>">ORDER</a>
+        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_SESSION['id']; ?>">HISTORY</a>
+        <li class="active"><a href="profile.php?id_active=<?php echo $_SESSION['id']; ?>">MY PROFILE</a>
       </ul>
     </div>
   </div>
@@ -23,23 +27,28 @@
       <span>MY PROFILE</span>
     </div>
     <div class="floating-box-right-p">
-      <a href="editprofile.php"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editprofile.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 
   <div id="profile-content">
     <?php
       require 'connection.php';
-      $id = 3;
-      $sql = "SELECT * FROM user WHERE id=$id";
-      $result = $mysqli->query($sql);
+      $query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+      $result = $mysqli->query($query);
+      if (!$result) {
+        exit("The query failed!");
+      }
       $row = $result->fetch_assoc();
-      $sql_pl = "SELECT * FROM preferredlocation WHERE id=$id";
-      $result_pl = $mysqli->query($sql_pl);
+
+      $query_pl = "SELECT * FROM preferredlocation WHERE id=$_SESSION[id]";
+      $result_pl = $mysqli->query($query_pl);
     ?>
+
     <img class="picture" src="<?=$row['img_path']?>"/>
     <p class="username">@<?=$row['username']?></p>
     <p class="data"><?=$row['fullname']?></p>
+    
     <?php
       if ($row['is_driver'] == 0) {
         echo '<p class="data">Non-Driver</p>';
@@ -49,6 +58,7 @@
         echo $printed;
       }
     ?>
+    
     <p class="data">&#9993; <?=$row['email']?></p>
     <p class="data">&#9743; <?=$row['phone_num']?></p>
   </div>
@@ -70,7 +80,7 @@
       ?>
     </div>
     <div class="floating-box-right-p">
-      <a href="editlocation.php"><img src="pencil.png" width="30px" height="30px"></a>
+      <a href="editlocation.php?id_active=<?php echo $_SESSION['id']; ?>"><img src="pencil.png" width="30px" height="30px"></a>
     </div>
   </div>
 </body>

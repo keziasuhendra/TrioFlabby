@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <html>
 <head>
 <script>
@@ -76,6 +77,24 @@ function showUser(str) {
   </div>
 </body>
 </html> -->
+=======
+<?php
+	require 'connection.php';
+	session_start();
+	
+	if (isset($_SESSION['id'])){ // redirect if hasn't logged out
+		header("location: profile.php?id_active=$_SESSION[id]");
+	}
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST')
+	{
+		if (isset($_POST['login']))
+		{
+			require 'loginprocess.php';
+		}
+	}
+?>
+>>>>>>> 8552b0888e8c605f17f918dfb11d3c36c117b501
 
 <!DOCTYPE html>
 <html>
