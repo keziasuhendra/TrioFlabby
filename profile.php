@@ -64,7 +64,7 @@
   </div>
 
   <div id="preferred-header">
-    <div class="floating-box-left-l-1">
+    <div class="floating-box-left-l">
       <span>PREFERRED LOCATIONS:</span>
       <?php
         if ($result_pl->num_rows > 0) {
