@@ -784,12 +784,12 @@ td.cancel-image{
 #edit-location-list th{
   text-align: center;
 }
-#floating-box-left-l ul {
+#triangle ul {
   margin: 0.75em 0;
   padding: 0 1em;
   list-style: none;
 }
-#floating-box-left-l li:before{
+#triangle li:before{
   content: "";
   border-color: transparent #111;
   border-style: solid;

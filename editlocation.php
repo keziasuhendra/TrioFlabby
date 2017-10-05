@@ -2,7 +2,7 @@
 	require 'connection.php';
 	if (isset($_POST['addloc'])) {
 		$newloc = $_POST['newloc'];
-		$id = 3;
+		$id = $_GET['id_active'];
 		$sql = ("INSERT INTO preferredlocation (id, location) VALUES ('$id', '$newloc')");
 		if ($mysqli->query($sql) === true) {
 			/*echo "<script>alert('New location added');</script>";*/
@@ -19,7 +19,7 @@
 	<link rel="icon" href="icon.png" />
 	<title>Ojek Panas | Edit</title>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<script type="text/javascript" src="./js/editlocation.js"></script>  
+	<script type="text/javascript" src="./js/editlocation.js"></script>
 </head>
 <body>
 	<div class="edit-title">
@@ -28,7 +28,7 @@
     <div id="edit-profile-content">
     	<div id="edit-location-list">
     		<table id="preferredlocation" class="border-table" width="550px">
-    		
+
 		    	<tr>
 		    		<th>No</th>
 		    		<th>Location</th>
@@ -36,7 +36,7 @@
 		    	</tr>
 		    	<?php
 		    	    require 'connection.php';
-		    	    $id = 3;
+		    	    $id = $_GET['id_active'];
 					$sql = "SELECT * FROM preferredlocation WHERE id=$id";
 					$result = $mysqli->query($sql);
 
@@ -52,7 +52,7 @@
 					    		<td class="cancel-image"><img src="cancel.png" width="20px" height="20px" id="'.$counter.'" name="cancel"></td>
 					    	</tr>';
 					    	$counter++;
-						}  
+						}
 					    echo $loopResult;
 					} else {
 						echo "Nothing to display :(";
@@ -64,7 +64,7 @@
     		<div class="small-title">
         		<span>ADD NEW LOCATIONS:</span>
     		</div>
-    		<form method="POST" action="editlocation.php">
+    		<form method="POST" action="editlocation.php?id_active=<?=$_GET['id_active']?>">
     			<table width="550px">
     				<tr>
     					<td>
@@ -73,20 +73,20 @@
     					<td><button class="save-button" name="addloc">ADD</button></td>
     				</tr>
     			</table>
-    		
+
     		</form>
     		<div class="small-empty-space"></div>
     		<input type="button" class="back-button" value="BACK" onclick="window.location.href='profile.php'">
     	</div>
-    	
+
     </div>
-    
+
 </body>
 </html>
 
 <script type="text/javascript" language="javascript">
 	$(document).on('click', '.cancel', function() {
-		
+
 	});
 	/*$(document).on('click', '.delete', function(){
    var id = $(this).attr("id");
