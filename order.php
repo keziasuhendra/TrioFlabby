@@ -1,5 +1,4 @@
 <?php
- 	$filename = basename($_SERVER['PHP_SELF']);
   require 'preliminarycheck.php';
 ?>
 
@@ -15,9 +14,9 @@
     <?php include("navbar.php"); ?>
     <div class="after-box">
       <ul class="centered">
-        <li class="active"><a href="order.php?id_active=<?php echo $_SESSION['id']; ?>">ORDER</a>
-        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_SESSION['id']; ?>">HISTORY</a>
-        <li class="list-item"><a href="profile.php?id_active=<?php echo $_SESSION['id']; ?>">MY PROFILE</a>
+        <li class="active"><a href="order.php?id_active=<?php echo $_GET['id_active']; ?>">ORDER</a>
+        <li class="list-item"><a href="historyorder.php?id_active=<?php echo $_GET['id_active']; ?>">HISTORY</a>
+        <li class="list-item"><a href="profile.php?id_active=<?php echo $_GET['id_active']; ?>">MY PROFILE</a>
       </ul>
     </div>
   </div>

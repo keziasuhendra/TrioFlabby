@@ -1,5 +1,4 @@
 <?php
-	$filename = basename($_SERVER['PHP_SELF']);
 	require 'preliminarycheck.php';
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST')
@@ -14,7 +13,8 @@
 		if (isset($_POST['yourname']))
 		{
 			$updatedname = mysqli_real_escape_string($mysqli, $_POST['yourname']);
-			$mysqli->query("UPDATE user SET fullname='$updatedname' WHERE id='". $_SESSION['id'] ."'");
+			$query = "UPDATE user SET fullname='$updatedname' WHERE id='$_GET[id_active]'";
+			$mysqli->query($query);
 			// query update name
 		}
 		if (isset($_POST['phone']))
@@ -37,11 +37,11 @@
         <span>EDIT PROFILE INFORMATION</span>
     </div>
     <div id="edit-profile-content">
-    <form action="editprofileprocess.php" method="POST">
+    <form action="editprofile.php?id_active=<?=$_GET['id_active']?>" method="POST">
     	<table>
 			<?php
 				require 'connection.php';
-				$query = "SELECT * FROM user WHERE id=$_SESSION[id]";
+				$query = "SELECT * FROM user WHERE id=$_GET[id_active]";
 				$result = $mysqli->query($query);
 				if (!$result) {
 					exit("The query failed!");
@@ -56,7 +56,7 @@
 	    	</tr>
 	    	<tr>
 	    		<td class="horizontal-space"></td>
-	    		<td class="upper-table"><input type="file" name="img"></td>
+	    		<td class="upper-table"><input type="file" name="img" accept="image/*"></td>
 	    	</tr>
 	    	<tr>
 	    		<td colspan="3" class="vertical-space"></td>
